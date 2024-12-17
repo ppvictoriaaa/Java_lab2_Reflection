@@ -24,7 +24,7 @@ public class Car {
     @NotNull
     private String brand;
 
-    @StringLength(min = 2, max = 20)
+    @StringLength(min = 2, max = 10)
     private String modal;
 
     @MaxValue(2024)

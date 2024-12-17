@@ -73,7 +73,7 @@ public class Main {
             // Validation for Medicine object
             System.out.println("3) Validating Medicine:");
 
-            Medicine medicine = new Medicine("Ibuprofen", "Painkiller", 14, 75);
+            Medicine medicine = new Medicine(null, "Painkiller", 14, 75);
 
             // Validation with reflection
             startTime = System.nanoTime();
