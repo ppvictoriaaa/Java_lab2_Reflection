@@ -43,12 +43,13 @@ public class ValidatorNoReflection {
 
         // Validation for @MinValue and @MaxValue on 'age' field
         if (person.getAge() != null) {
-            if (person.getAge() < 18) {
-                throw new IllegalArgumentException("Field 'age' must not be less than 18.");
-            }
-            if (person.getAge() > 100) {
-                throw new IllegalArgumentException("Field 'age' must not be greater than 100.");
-            }
+                if (person.getAge() < 18) {
+                    throw new IllegalArgumentException("Field 'age' must not be less than 18.");
+                }
+                if (person.getAge() > 100) {
+                    throw new IllegalArgumentException("Field 'age' must not be greater than 100.");
+                }
+
         }
     }
 

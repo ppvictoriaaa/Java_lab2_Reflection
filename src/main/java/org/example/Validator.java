@@ -91,6 +91,17 @@ public class Validator {
                     }
                 }
             }
+
+            // Check for incorrect annotation type assignment
+            if (field.isAnnotationPresent(StringLength.class) && !(value instanceof String)) {
+                throw new IllegalArgumentException("Annotation @StringLength cannot be applied to a non-String field: " + field.getName());
+            }
+            if (field.isAnnotationPresent(MaxValue.class) && !(value instanceof Integer)) {
+                throw new IllegalArgumentException("Annotation @MaxValue cannot be applied to a non-Integer field: " + field.getName());
+            }
+            if (field.isAnnotationPresent(MinValue.class) && !(value instanceof Integer)) {
+                throw new IllegalArgumentException("Annotation @MinValue cannot be applied to a non-Integer field: " + field.getName());
+            }
         }
     }
 }
